@@ -1,5 +1,8 @@
 .footer {
   background-color: #3b3c3d;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footerConto {
