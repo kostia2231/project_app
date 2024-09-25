@@ -1,0 +1,8 @@
+.bannerImg img {
+  width: 100%;
+  height: auto;
+}
+
+.bannerImg {
+  margin-inline: 10rem;
+}
