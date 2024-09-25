@@ -4,11 +4,36 @@ import styles from "./style.module.css";
 export default function Header() {
   return (
     <div>
-      This is Header component
       <nav className={styles.navbar}>
-        <NavLink to="/">Главная</NavLink>
-        <NavLink to="/cart">Корзина</NavLink>
-        <NavLink to="/contacts">Контакты</NavLink>
+        <div>
+          <h1>Snicker Shop</h1>
+        </div>
+        <div className={styles.navbarLinks}>
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({
+              color: isActive ? "#fff" : "#ffffff80",
+            })}
+          >
+            Главная
+          </NavLink>
+          <NavLink
+            to="/cart"
+            style={({ isActive }) => ({
+              color: isActive ? "#fff" : "#ffffff80",
+            })}
+          >
+            Корзина
+          </NavLink>
+          <NavLink
+            to="/contacts"
+            style={({ isActive }) => ({
+              color: isActive ? "#fff" : "#ffffff80",
+            })}
+          >
+            Контакты
+          </NavLink>
+        </div>
       </nav>
     </div>
   );

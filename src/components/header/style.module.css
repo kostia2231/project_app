@@ -1,4 +1,25 @@
 .navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b3c3d;
+  padding: 2rem 10rem;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbarLinks a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
 }
