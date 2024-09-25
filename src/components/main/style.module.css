@@ -16,3 +16,8 @@
 .headingWrapper h1 {
   font-size: 36px;
 }
+
+.productsFeed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

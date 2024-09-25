@@ -11,11 +11,10 @@ export default function Cart() {
   }, []);
 
   //Получение данных
+  const CART_ITEM_URL = "https://66f3c84a77b5e8897096cd57.mockapi.io/cartItem";
   async function getCartItems() {
     try {
-      const res = await axios.get(
-        "https://66ced65d901aab24841fc4b1.mockapi.io/cartItem"
-      );
+      const res = await axios.get(CART_ITEM_URL);
       setCartList(res.data);
     } catch (error) {
       console.log(error);
