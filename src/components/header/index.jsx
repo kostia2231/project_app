@@ -6,7 +6,7 @@ export default function Header() {
     <div>
       <nav className={styles.navbar}>
         <div className={styles.navbarMain}>
-          <NavLink to="/">Snicker Shop</NavLink>
+          <NavLink to="/">Сникер-магазин</NavLink>
         </div>
         <div className={styles.navbarLinks}>
           <NavLink
