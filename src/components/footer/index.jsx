@@ -23,7 +23,7 @@ export default function Footer() {
       </div>
       <div className={styles.footerBottom}>
         <div>
-          <p>2024 Сникер-магазин. Все права защищены</p>
+          <p>2024 Сникер-магазин. Все права защищены кем-то.</p>
         </div>
         <div className={styles.inputWrapper}>
           <input type="text" placeholder="Введите свой email:" />

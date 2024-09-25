@@ -1,0 +1,45 @@
+.addButton {
+  background-color: rgb(236, 236, 236);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+  border: 1px solid #eaeaea;
+  margin-top: auto;
+}
+
+.addButton:hover {
+  cursor: pointer;
+  border: 1px solid #676767;
+}
+
+.mainItem {
+  border: 1px solid #eaeaea;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  max-height: 380px;
+  gap: 2rem;
+}
+img {
+  width: 100%;
+}
+p {
+  font-size: 14px;
+  color: #676767;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.priceAndButton {
+  display: flex;
+  justify-content: space-between;
+}

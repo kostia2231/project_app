@@ -18,6 +18,9 @@
 }
 
 .productsFeed {
+  margin: 3rem 0 10rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 8rem;
+  align-self: center;
 }
