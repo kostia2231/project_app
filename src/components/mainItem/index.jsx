@@ -12,7 +12,7 @@ export default function MainItem({ id, name, image, price, toCart }) {
           <p>ЦЕНА:</p>
           <p className={styles.price}>{price} €</p>
         </div>
-        <div className={styles.addButton}>
+        <div className={styles.addButton} onClick={toCart}>
           <AddButton />
         </div>
       </div>

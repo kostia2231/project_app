@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import CartItem from "../catItem";
 import axios from "axios";
+const CART_ITEM_URL = "https://66f3c84a77b5e8897096cd57.mockapi.io/cartItem";
 
 export default function Cart() {
   const [cartList, setCartList] = useState([]);
@@ -11,7 +12,6 @@ export default function Cart() {
   }, []);
 
   //Получение данных
-  const CART_ITEM_URL = "https://66f3c84a77b5e8897096cd57.mockapi.io/cartItem";
   async function getCartItems() {
     try {
       const res = await axios.get(CART_ITEM_URL);
