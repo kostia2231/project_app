@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./style.module.css";
+import { ReactComponent as FacebookLogo } from "../../assets/img/f.svg";
+import { ReactComponent as XLogo } from "../../assets/img/x.svg";
+import { ReactComponent as InstagramLogo } from "../../assets/img/i.svg";
 
 export default function Footer() {
   return (
@@ -12,7 +15,11 @@ export default function Footer() {
             emailexample@email.com
           </p>
         </div>
-        <div className={styles.icons}></div>
+        <div className={styles.icons}>
+          <FacebookLogo />
+          <XLogo />
+          <InstagramLogo />
+        </div>
       </div>
       <div className={styles.footerBottom}>
         <div>

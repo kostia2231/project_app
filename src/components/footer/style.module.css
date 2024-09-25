@@ -2,6 +2,12 @@
   background-color: #3b3c3d;
 }
 
+.footerConto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .footerConto h1 {
   font-size: 24px;
   color: #fff;
@@ -43,4 +49,9 @@ input:focus {
 .inputWrapper {
   padding-bottom: 1rem;
   border-bottom: 1px solid #ffffff80;
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
 }
