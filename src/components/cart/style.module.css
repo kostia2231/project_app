@@ -1,7 +1,18 @@
 .cart {
   margin: 2rem 10rem;
 }
+.cartBody {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 4rem;
+}
 
 .cart h1 {
   font-size: 36px;
+}
+
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }

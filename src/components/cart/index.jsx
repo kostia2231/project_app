@@ -10,6 +10,7 @@ export default function Cart() {
     getCartItems();
   }, []);
 
+  //Получение данных
   async function getCartItems() {
     try {
       const res = await axios.get(
@@ -43,8 +44,8 @@ export default function Cart() {
       {cartList.length === 0 ? (
         <h3>Ваша корзина пуста...</h3>
       ) : (
-        <div>
-          <div>
+        <div className={styles.cartBody}>
+          <div className={styles.itemWrapper}>
             {cartList.map((item) => {
               return (
                 <CartItem key={item.id} {...item} onRemove={removeFromCart} />
