@@ -21,6 +21,7 @@ export default function Cart() {
     }
   }
 
+  //Подсчет общей суммы
   const getTotalPrice = () => {
     return cartList.reduce((acc, item) => {
       const price =
@@ -28,6 +29,13 @@ export default function Cart() {
       return acc + price;
     }, 0);
   };
+
+  //Удаление из корзины
+  function removeFromCart(id) {
+    setCartList((prevCartList) =>
+      prevCartList.filter((item) => item.id !== id)
+    );
+  }
 
   return (
     <div className={styles.cart}>
@@ -38,7 +46,9 @@ export default function Cart() {
         <div>
           <div>
             {cartList.map((item) => {
-              return <CartItem key={item.id} {...item} />;
+              return (
+                <CartItem key={item.id} {...item} onRemove={removeFromCart} />
+              );
             })}
           </div>
           <div>
