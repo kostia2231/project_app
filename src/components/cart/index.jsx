@@ -52,15 +52,17 @@ export default function Cart() {
               );
             })}
           </div>
-          <div>
-            <h3>Итого: </h3>
-            <div>
+          <div className={styles.cartTotalWrapper}>
+            <h2>Итого</h2>
+            <div className={styles.cartItems}>
               {cartList.map((item) => {
                 return <p key={item.id}>{item.name}</p>;
               })}
             </div>
-            <h3>Общая цена: </h3>
-            <p>{getTotalPrice()}</p>
+            <div className={styles.totalPriceWrapper}>
+              <h3>ЦЕНА: </h3>
+              <p className={styles.totalPrice}>{getTotalPrice()} €</p>
+            </div>
           </div>
         </div>
       )}

@@ -5,17 +5,23 @@ import removeIcon from "../../assets/icons/delete.svg";
 export default function CartItem({ id, name, price, image, onRemove }) {
   return (
     <div className={styles.item}>
-      <img src={image} alt="product_image" />
+      <div className={styles.productImgWrapper}>
+        <img src={image} alt="product_image" />
+      </div>
       <h3>{name}</h3>
-      <p>Цена</p>
-      <p>{price}</p>
-      <img
-        onClick={() => {
-          onRemove(id);
-        }}
-        src={removeIcon}
-        alt="remove_icon"
-      />
+      <div className={styles.priceWrapper}>
+        <p>ЦЕНА:</p>
+        <span className={styles.price}>{price} €</span>
+      </div>
+      <div className={styles.circleDeleteWrapper}>
+        <img
+          onClick={() => {
+            onRemove(id);
+          }}
+          src={removeIcon}
+          alt="remove_icon"
+        />
+      </div>
     </div>
   );
 }
