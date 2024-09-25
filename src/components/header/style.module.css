@@ -6,10 +6,11 @@
   padding: 2rem 10rem;
 }
 
-.navbar h1 {
+.navbarMain a {
   font-size: 20px;
   font-weight: 800;
   color: #fff;
+  text-decoration: none;
 }
 
 .navbarLinks {

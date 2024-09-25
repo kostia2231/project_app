@@ -58,3 +58,7 @@ input:focus {
   display: flex;
   gap: 1.5rem;
 }
+
+.icons * {
+  cursor: pointer;
+}
