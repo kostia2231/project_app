@@ -1,0 +1,46 @@
+.footer {
+  background-color: #3b3c3d;
+}
+
+.footerConto h1 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footerConto p {
+  font-size: 18px;
+  color: #ffffff80;
+  font-weight: 400;
+}
+
+.footerTop {
+  padding: 2rem 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+}
+
+.footerBottom * {
+  color: #ffffff80;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+input {
+  border: none;
+  background-color: #3b3c3d;
+}
+input:focus {
+  outline: none;
+}
+
+.inputWrapper {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ffffff80;
+}

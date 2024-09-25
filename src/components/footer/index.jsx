@@ -1,3 +1,27 @@
+import React from "react";
+import styles from "./style.module.css";
+
 export default function Footer() {
-  return <div>This is Footer component</div>;
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.footerTop}>
+        <div className={styles.footerConto}>
+          <h1>Контакты</h1>
+          <p>
+            8 800 000 00 00 <br />
+            emailexample@email.com
+          </p>
+        </div>
+        <div className={styles.icons}></div>
+      </div>
+      <div className={styles.footerBottom}>
+        <div>
+          <p>2024 Сникер-магазин. Все права защищены</p>
+        </div>
+        <div className={styles.inputWrapper}>
+          <input type="text" placeholder="Введите свой email:" />
+        </div>
+      </div>
+    </footer>
+  );
 }
