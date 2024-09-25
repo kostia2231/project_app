@@ -1,8 +1,18 @@
+.main {
+  margin-inline: 10rem;
+}
+
 .bannerImg img {
+  margin-top: 1rem;
   width: 100%;
   height: auto;
 }
+.headingWrapper {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eaeaea;
+  margin: 4rem 0 10px 0;
+}
 
-.bannerImg {
-  margin-inline: 10rem;
+.headingWrapper h1 {
+  font-size: 36px;
 }
