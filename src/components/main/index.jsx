@@ -26,15 +26,10 @@ export default function Main() {
   // Добавление товара в корзину ????
   async function addToCart(item) {
     try {
-      const res = await axios.post(CART_ITEM_URL, {
-        image: item.image,
-        name: item.name,
-        price: item.price,
-        id: item.id,
-      });
+      const res = await axios.post(CART_ITEM_URL, item);
+      setCart((prev) => [...prev, res.data]);
       console.log(mainData);
       console.log(item);
-      setCart((prev) => [...prev, res.data]);
     } catch (error) {
       console.log(error);
     }
