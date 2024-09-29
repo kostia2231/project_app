@@ -39,7 +39,17 @@ export default function Main() {
       });
       setCart((prev) => [...prev, res.data]);
       console.log("Item added to cart:", res.data);
+      console.log(cartItem);
       console.log("Cart: ", cart);
+    } catch (error) {
+      console.log("ERROR: ", error);
+    }
+  }
+
+  async function removeFromCart(id) {
+    try {
+      console.log(`${CART_ITEM_URL}/${id}`);
+      await axios.delete(`${CART_ITEM_URL}/${id}`);
     } catch (error) {
       console.log("ERROR: ", error);
     }
@@ -56,7 +66,13 @@ export default function Main() {
         </div>
         <div className={styles.productsFeed}>
           {mainData.map((item) => (
-            <MainItem key={item.id} {...item} item={item} toCart={addToCart} />
+            <MainItem
+              key={item.id}
+              {...item}
+              item={item}
+              removeFromCart={removeFromCart}
+              toCart={addToCart}
+            />
           ))}
         </div>
       </div>

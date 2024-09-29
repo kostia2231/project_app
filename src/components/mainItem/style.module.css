@@ -10,7 +10,25 @@
   margin-top: auto;
 }
 
+.deleteButton {
+  background-color: grey;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+  border: 1px solid #eaeaea;
+  margin-top: auto;
+  transform: rotate(45deg);
+}
+
 .addButton:hover {
+  cursor: pointer;
+  border: 1px solid #676767;
+}
+
+.deleteButton:hover {
   cursor: pointer;
   border: 1px solid #676767;
 }
