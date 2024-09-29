@@ -14,7 +14,6 @@ export default function Main() {
     getAllItems();
   }, []);
 
-  // Получение всех продуктов
   async function getAllItems() {
     try {
       const res = await axios.get(ALL_ITEM_URL);
@@ -23,19 +22,28 @@ export default function Main() {
       console.log(error);
     }
   }
-  // Добавление товара в корзину ????
+
   async function addToCart(item) {
+    const cartItem = {
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      image: item.image,
+    };
+
     try {
-      const res = await axios.post(CART_ITEM_URL, item);
+      const res = await axios.post(CART_ITEM_URL, cartItem, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       setCart((prev) => [...prev, res.data]);
-      console.log(mainData);
-      console.log(item);
+      console.log("Item added to cart:", res.data);
+      console.log("Cart: ", cart);
     } catch (error) {
-      console.log(error);
+      console.log("ERROR: ", error);
     }
   }
-
-  console.log(cart);
 
   return (
     <main className={styles.main}>
@@ -48,7 +56,7 @@ export default function Main() {
         </div>
         <div className={styles.productsFeed}>
           {mainData.map((item) => (
-            <MainItem key={item.id} {...item} toCart={addToCart} />
+            <MainItem key={item.id} {...item} item={item} toCart={addToCart} />
           ))}
         </div>
       </div>

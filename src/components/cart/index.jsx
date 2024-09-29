@@ -31,10 +31,15 @@ export default function Cart() {
   };
 
   //Удаление из корзины
-  function removeFromCart(id) {
-    setCartList((prevCartList) =>
-      prevCartList.filter((item) => item.id !== id)
-    );
+  async function removeFromCart(id) {
+    try {
+      setCartList((prevCartList) =>
+        prevCartList.filter((item) => item.id !== id)
+      );
+      await axios.delete(`${CART_ITEM_URL}/${id}`);
+    } catch (error) {
+      console.log("ERROR: ", error);
+    }
   }
 
   return (
